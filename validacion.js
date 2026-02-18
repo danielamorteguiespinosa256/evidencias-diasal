@@ -1,6 +1,9 @@
 let usuario = document.getElementById("usuario");
 let mensaje = document.getElementById("mensaje");
+let checkbox = document.getElementById("checkbox");
+let password = document.getElementById("password");
 
+// Validar usuario
 usuario.addEventListener("input", function () {
 
     let valor = this.value;
@@ -21,5 +24,14 @@ usuario.addEventListener("input", function () {
         mensaje.style.color = "green";
     }
 
-    this.value = valor.replace(/[^a-zA-Z]/g, '');
+    this.value = valor.replace(/[^a-zA-Z0-9.-]/g, '');
+});
+
+// Mostrar / ocultar contraseña
+checkbox.addEventListener("change", function(){
+    if (this.checked){
+        password.type = "text";
+    } else{
+        password.type = "password";
+    }
 });
