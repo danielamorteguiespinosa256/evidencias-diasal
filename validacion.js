@@ -35,3 +35,12 @@ checkbox.addEventListener("change", function(){
         password.type = "password";
     }
 });
+// contador-contraseñ
+const input = document.getElementById('password');
+const contador = document.getElementById('contador');
+
+input.addEventListener('input', function(e) {
+
+const longitud = e.target.value.length;
+contador.textContent = longitud;
+    });
