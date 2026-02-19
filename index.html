@@ -1,30 +1,51 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
 
 <form>
     <div class="container mt-4">
 
-        <div class="mb-3">
-            <label for="usuario" class="form-label">Usuario:</label>
-            <input type="text" class="form-control" id="usuario"> 
-            <span id="mensaje" class="form-text"></span>
-        </div>
-
-        <div class="mb-3">
-            <label for="password" class="form-label">Contraseña:</label>
-            <input type="password" class="form-control" id="password">
-            <p><span id="contador">0</span>10</p>
-        </div>
-
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox">
-            <label class="form-check-label" for="checkbox">Mostrar contraseña</label>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Enviar</button>
-
+    <!-- USUARIO -->
+    <div class="mb-3">
+        <label for="usuario" class="form-label">Usuario:</label>
+        <input type="text" class="form-control" id="usuario"> 
+        <span id="mensaje" class="form-text"></span>
+        
     </div>
-    
+
+    <!-- PASSWORD -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" id="password">
+
+        <p>Caracteres: <span id="contadorCaracteres">0</span></p>
+        <p>Intentos fallidos: <span id="contador">0</span></p>
+        <span id="mensajePassword" class="form-text"></span>
+    </div>
+
+    <!-- MOSTRAR PASSWORD -->
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="checkbox">
+        <label class="form-check-label" for="checkbox">Mostrar contraseña</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+    <span id="mensajeGeneral" class="form-text d-block mt-2"></span>
+
+</div>
+
 
 </form>
 
 <script src="validacion.js"></script>
+
+</body>
+</html>
